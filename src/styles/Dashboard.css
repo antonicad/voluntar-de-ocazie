@@ -1,0 +1,167 @@
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e2ffe1;
+    min-height: 80vh;
+    margin-top: 15vh;
+}
+
+.left-side {
+    width: 30%;
+    background-color: #008f00b0;
+    padding: 20px;
+    box-shadow: 0 0 15px #004e008e;
+}
+
+.left-side h1 {
+    color: white;
+    margin-bottom: 15%;
+    text-shadow: 0 0 5px #004e008e;
+}
+
+.left-side button {
+    display: block;
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #004e0000;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-bottom: white solid 1px;
+    text-align: left;
+    font-weight: 300;
+    text-shadow: 0 0 5px #004e008e;
+}
+
+.left-side button:hover {
+    background: rgba(219, 219, 219, 0.29);
+}
+
+.right-side {
+    width: 70%;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.right-side img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 5%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.right-side p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+.right-side ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nivel-container {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004E00ff;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #00B300ff;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.right-side button {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #00B300ff;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.right-side button:hover {
+    background-color: #008000;
+}
+
+.left-side .logout {
+    margin-top: 15%;
+    width: 30%;
+}
+
+.popUpInsertCode {
+    width: 50%;
+    height: 40%;
+    top: 17.5%;
+    right: 10%;
+    position: fixed;
+    z-index: 99999;
+    background-color: #ceffce;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: .7rem !important;
+}
+
+.popUpInsertCode input {
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem !important;
+    text-align: center;
+}
+
+.popUpInsertCode button {
+    width: 30% !important;
+}
+
+.regulament p {
+    font-size: 1rem !important;
+}
+
+.premii {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+.premii .premiu-div {
+  width: calc(33.33% - 20px);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.premiu-div p {
+  font-size: .9rem !important;
+}
+

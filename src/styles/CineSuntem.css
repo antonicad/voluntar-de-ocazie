@@ -1,0 +1,54 @@
+.aboutUsContainer {
+    margin: 0 20%;
+    margin-top: 20vh;
+    margin-bottom: 100px;
+    width: 60%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px 5% 40px 5%;
+    border-radius: 10px;
+    background: white;;
+}
+
+.aboutUsContainer h1 {
+    text-align: center;
+}
+
+.aboutUsContainer h2 {
+    text-align: center;
+}
+
+.aboutUsContainer p {
+    text-align: justify;
+}
+
+body {
+    background: #e2ffe1;
+}
+
+.aboutUsContainer button {
+    border: solid #00B300ff 0.3vh;
+    color: #00B300ff;
+    transition: 0.3s ease-in;
+    background-color: #00000000;
+    border-radius: 4vh;
+    padding: 0.5vh 2vh;
+    cursor: pointer;
+    margin: 5% 0;
+    font-size: 1.3rem !important;
+    font-weight: 600;
+}
+
+.aboutUsContainer button:hover {
+    color: white;
+    background-color: #00B300ff;
+}
+
+.aboutUsContainer img {
+    width: 100%;
+}
+
+.centered-p {
+    text-align: center !important;
+    margin: 0 auto;
+}

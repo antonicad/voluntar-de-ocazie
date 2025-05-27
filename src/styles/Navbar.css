@@ -1,0 +1,85 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3%;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .nav-left a,
+  .nav-right a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .nav-left a:hover,
+  .nav-right a:hover {
+    color: #007bff;
+  }
+  
+  .nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .donate-btn, .login-btn, .register-btn {
+    border: solid #000000 0.3vh;
+    background-color: #00000000;
+    border-radius: 3vh;
+    padding: 0.5vh 2vh;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .donate-btn, .login-btn {
+    border: solid #00B300ff 0.3vh;
+    color: #00B300ff;
+    transition: 0.3s ease-in;
+  }
+
+  .donate-btn:hover, .login-btn:hover {
+    color: white;
+    background-color: #00B300ff;
+  }
+
+  .register-btn {
+    background-color: #00B300ff;
+    border: solid #00B300ff 0.3vh;
+    color: white;
+    transition: 0.3s ease-in;
+  }
+
+  .register-btn:hover {
+    color: white;
+    background: #004E00ff;
+    border: solid #004E00ff 0.3vh;
+  }
+
+  /*
+--black: #000000ff;
+--kelly-green: #00B300ff;
+--pakistan-green: #004E00ff;
+--black-2: #000000ff;
+--dark-green: #001D00ff;
+  */

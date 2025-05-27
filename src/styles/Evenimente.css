@@ -1,0 +1,93 @@
+.evenimenteContainer {
+    margin: 0 25%;
+    margin-top: 20vh;
+    margin-bottom: 100px;
+    margin-left: 30%;
+    width: 65%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px 5% 40px 5%;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.evenimenteContainer h1 {
+    text-align: center;
+}
+
+.evenimenteContainer h2 {
+    text-align: center;
+}
+
+.evenimenteContainer p {
+    text-align: justify;
+}
+
+.eventStats {
+    position: fixed;
+    width: 20%;
+    margin-top: 20vh;
+    top: 0;
+    z-index: 99999;
+    left: 5%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 10px;
+    padding: 50px 2% 50px 2%;
+    text-align: center !important;
+    background-color: #f9f9f9;
+}
+
+.evenimenteContainer h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.eveniment {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.eveniment:hover {
+  transform: translateY(-4px);
+}
+
+.eveniment h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #2a2a2a;
+  text-align: left;
+}
+
+.eveniment p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.eveniment button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #00B300ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.eveniment button:hover:not(:disabled) {
+  background-color: #005fa3;
+}
+
+.eveniment button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}

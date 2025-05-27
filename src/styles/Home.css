@@ -1,0 +1,260 @@
+/* Stilizare pentru div-ul de întâmpinare */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.first-Banner {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    margin-top: 10vh;
+    background-image: url("images/poza-banner.jpg");
+    height: 85vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding-left: 20%;
+    padding-top: 10%;
+    padding-right: 40%;
+  }
+  
+  .first-Banner h1 {
+    color: white;
+    margin: 0;
+    margin-bottom: 5%;
+    text-shadow: 0 0 5px #004e008e;
+  }
+  
+  .first-Banner p {
+    color: white;
+    text-align: left;
+    margin: 0;
+    text-shadow: 0 0 5px #004e008e;
+  }
+  
+.banner-box {
+    background-color: #00b300b0;
+    box-sizing: border-box;
+    padding: 30px 40px;
+    box-shadow: 0 0 15px #004e008e;
+}
+
+  .first-Banner button {
+    background-color: #ffffff;
+    border-radius: 3vh;
+    padding: 0.5vh 2vh;
+    cursor: pointer;
+    border: solid rgb(255, 255, 255) 0.3vh;
+    color: #004E00ff;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s ease-in;
+    margin-top: 5%;
+    margin-left: 60%;
+    box-shadow: 0 0 15px #004e008e;
+  }
+  
+  .first-Banner button:hover {
+    background: rgb(194, 255, 206);
+  }
+  
+  .servicii-Home {
+    background-color: #e2ffe1;
+    padding: 20px 15% 30px 15%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .servicii-Home h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
+  
+  .servicii-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Spatiu între cele două div-uri */
+    flex-wrap: wrap; /* Asigură că se aranjează corect pe dispozitive mai mici */
+    margin-top: 20px;
+  }
+  
+  .servicii-container div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 40%; /* Fiecare div va ocupa 45% din lățimea container-ului */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .servicii-container > div > b {
+    font-size: 1.3rem;
+  }
+  
+  .servicii-container ul {
+    list-style-type: square;
+    padding: 0% 7%;
+    text-align: left; /* Aliniem listele la stânga */
+    font-size: 1.1rem;
+    color: #333;
+    text-align: justify;
+  }
+  
+  .servicii-container ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .servicii-container ul li b {
+    color: #00B300ff;
+  }
+
+  .servicii-container button {
+    border: solid #00B300ff 0.3vh;
+    color: #00B300ff;
+    transition: 0.3s ease-in;
+    background-color: #00000000;
+    border-radius: 3vh;
+    padding: 0.5vh 2vh;
+    cursor: pointer;
+    margin: 5% 0;
+  }
+  
+  .servicii-container button:hover {
+    color: white;
+    background-color: #00B300ff;
+  }
+
+  .events-section-home {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .events-section-home h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .event-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .event-home img {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 10px;
+  }
+  
+  .event-home div {
+    text-align: left;
+    flex: 1;
+  }
+  
+  .event-home h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .event-home p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .event-home .date {
+    font-weight: bold;
+    color: #d35400;
+  }
+  
+  .see-event-home {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .see-event-home:hover {
+    background-color: #e65c00;
+  }
+  
+  .more-events-home {
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid #ff6600;
+    color: #ff6600;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .more-events-home:hover {
+    background-color: #ff6600;
+    color: white;
+  }
+  
+
+  .social-media {
+    text-align: center;
+    background: linear-gradient(135deg, #00B300ff, rgb(0, 133, 0));
+    color: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .social-media h1 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-icons img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: border 0.3s ease-in-out;
+  }
+  
+  .social-icons a:hover img {
+    border-color: #caf0f8;
+  }
+  

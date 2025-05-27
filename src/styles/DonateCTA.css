@@ -1,0 +1,49 @@
+.donate-section {
+    text-align: center;
+    background: linear-gradient(135deg, #00B300ff, rgb(0, 141, 0));
+    color: white;
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    max-width: 800px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .donate-section h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .donate-section p {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  
+  .donate-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .donate-btn-home,
+  .redirect-btn {
+    background: white;
+    color: #00B300ff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background 0.3s ease;
+  }
+  
+  .donate-btn-home:hover,
+  .redirect-btn:hover {
+    transform: scale(1.05);
+    background: rgb(219, 255, 219)
+  }
+  
