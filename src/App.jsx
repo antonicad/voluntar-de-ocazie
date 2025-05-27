@@ -1,6 +1,5 @@
 import './styles/App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import CineSuntem from './pages/CineSuntem';
@@ -14,7 +13,7 @@ import DashboardPremii from './pages/DashboardPremii';
 
 const App = () => {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
@@ -27,8 +26,7 @@ const App = () => {
         <Route path="/dashboardpuncte" element={<DashboardPuncte />} />
         <Route path="/dashboardpremii" element={<DashboardPremii />} />
       </Routes>
-    </Router>
-
+    </HashRouter>
   );
 };
 
