@@ -1,13 +1,16 @@
 import '../styles/CineSuntem.css'
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
+import logo from "../../public/logo.png"; 
+import voluntar from "../assets/volunteer.jpg";
 
 const CineSuntem = () => {
   return (
     <>
     <Navbar />
     <div className="aboutUsContainer">
-      <img src="/logo.png"></img>
+      <img src={logo}></img>
       <h1>Despre Voluntar de Ocazie</h1>
       <p>
         🌍 <b>Voluntar de Ocazie</b> este o platformă dedicată celor care vor să facă o schimbare în comunitate, conectând voluntarii cu evenimentele și organizatorii care au nevoie de sprijin. Credem că voluntariatul trebuie să fie accesibil, motivant și interactiv, de aceea am creat un sistem care transformă fiecare acțiune într-o experiență de neuitat.
@@ -27,7 +30,7 @@ const CineSuntem = () => {
         Visăm la o lume în care voluntariatul nu este doar o obligație morală, ci o experiență plină de satisfacții, recunoscută și apreciată. Vrem să eliminăm distanța dintre organizatori și voluntari, să oferim soluții digitale moderne și să creăm un ecosistem în care toată lumea câștigă.
       </p>
       <br></br>
-      <img src="/volunteer.jpg"></img>
+      <img src={voluntar}></img>
       
       <h2>Ce oferim?</h2>
       <h3>Pentru voluntari:</h3>
@@ -52,7 +55,7 @@ const CineSuntem = () => {
       </ul>
       <p className='centered-p'>
         📅 <b>Alătură-te comunității Voluntar de Ocazie și fii parte din schimbare!</b> 🚀
-        <button>Devino voluntar!</button>
+        <Link to="/register"><button>Devino voluntar!</button></Link>
       </p>
 
     </div>

@@ -1,0 +1,50 @@
+.doneazaContainer {
+    margin: 0 20%;
+    margin-top: 20vh;
+    margin-bottom: 100px;
+    width: 60%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 50px 5% 50px 5%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.doneazaContainer h1 {
+    text-align: center;
+}
+
+.donateForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.donateForm label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.donateForm input,
+.donateForm textarea {
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.donateForm button {
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+  background-color: #008000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}

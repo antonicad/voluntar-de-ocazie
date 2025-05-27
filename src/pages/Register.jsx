@@ -67,7 +67,7 @@ const Register = () => {
 
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
-          <h1>Înregistrează-te</h1>
+          <h1>Devino Voluntar!</h1>
 
           {error && <p className="error">{error}</p>}
           {success && <p className="success">{success}</p>}

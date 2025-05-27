@@ -1,0 +1,77 @@
+.event-form input {
+  margin: 5px;
+  padding: 8px;
+  width: 90%;
+}
+
+.event-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #009688;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.event-list {
+  margin-top: 20px;
+}
+
+.event-item {
+  background: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.event-item button {
+  margin-top: 10px;
+  background-color: #e53935 !important;
+  color: white;
+  width: 20%;
+  border: none;
+  padding: 8px;
+}
+
+.right-side p {
+    font-size: .9rem !important;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.admin-table input {
+  width: 90%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-table button {
+  margin: 3px 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-table .delete-btn {
+  background-color: #e74c3c;
+}
