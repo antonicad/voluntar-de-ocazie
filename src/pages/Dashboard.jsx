@@ -3,6 +3,7 @@ import "../styles/Dashboard.css";
 import Navbar from "../components/Navbar";
 import { supabase } from "../assets/supabaseClient";
 import { Link, useNavigate } from "react-router-dom";
+import profilePic from "../assets/profile.png";
 
 
 const Dashboard = () => {
@@ -157,7 +158,7 @@ const calculateLevel = (xp) => {
         </div>
 
         <div className="right-side">
-          <img src="/profile.png" alt="Profil" />
+          <img src={profilePic} alt="Profil" />
           <p>Salutare, {userData.name}!</p>
           <p>Cont creat la: {new Date(userData.created_at).toLocaleDateString()}</p>
 
