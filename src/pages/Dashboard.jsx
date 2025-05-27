@@ -3,7 +3,7 @@ import "../styles/Dashboard.css";
 import Navbar from "../components/Navbar";
 import { supabase } from "../assets/supabaseClient";
 import { Link, useNavigate } from "react-router-dom";
-import profilePic from "../assets/profile.png";
+import profilePic from "../../public/profile.png";
 
 
 const Dashboard = () => {

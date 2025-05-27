@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import logo from "../../public/logo.png";  // importă logo-ul (ajustează calea după structura ta)
+import logo from "../../public/logo.png"; 
 
 const Navbar = () => {
   return (
