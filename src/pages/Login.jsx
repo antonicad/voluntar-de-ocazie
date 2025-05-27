@@ -4,6 +4,7 @@ import "../styles/Login.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { supabase } from "../assets/supabaseClient";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -79,7 +80,7 @@ const Login = () => {
           />
 
           <p>
-            Nu ai un cont? <a href="/register">Creează unul aici</a>
+            Nu ai un cont? <Link to="/register">Creează unul aici</Link>
           </p>
 
           <button type="submit">Loghează-te</button>

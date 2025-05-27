@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
+import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { supabase } from "../assets/supabaseClient";
@@ -107,7 +108,7 @@ const Register = () => {
             placeholder="Reintrodu parola"
           />
 
-          <p>Ai deja un cont? <a href="/login">Autentifică-te aici</a></p>
+          <p>Ai deja un cont? <Link to="/login">Autentifică-te aici</Link></p>
           <button type="submit">Înregistrează-te</button>
         </form>
       </div>
