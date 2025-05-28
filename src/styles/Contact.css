@@ -21,3 +21,16 @@
 .contact-organizator {
     margin: 30px 50px 20px 50px;
 }
+
+@media (max-width: 768px) {
+    .contactContainer {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        box-sizing: border-box;
+    }
+
+    .contact-organizator {
+        margin: 10% 0;
+    }
+}

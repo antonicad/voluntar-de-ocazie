@@ -1,6 +1,6 @@
 .partners-section {
     text-align: center;
-    padding: 10px 20px 60px 20px;
+    padding: 10px 0 60px 0;
     overflow: hidden;
     background: white;
     box-shadow: 0 5px 10px rgba(0, 78, 0, 0.093);
@@ -47,4 +47,10 @@
   .carousel:hover .carousel-track {
     animation-play-state: paused;
   }
-  
+
+  @media (max-width: 768px) {
+    .partners-section {
+      width: 100%;
+      padding: 10% 0 20% 0;
+    }
+  }

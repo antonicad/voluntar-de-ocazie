@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Dashboard.css";
 import "../styles/Admin.css";
-import Navbar from "../components/Navbar";
+
 import { supabase } from "../assets/supabaseClient";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -9,6 +9,7 @@ const AdminUsers = () => {
   const [userData, setUserData] = useState(null);
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -65,9 +66,9 @@ const AdminUsers = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="dashboard-container">
-        <div className="left-side">
+        <div className={`left-side ${menuOpen ? "open" : "closed"}`}>
           <h1>Admin Panel</h1>
           <Link to="/adminevents"><button>Evenimente</button></Link>
           <Link to="/adminusers"><button>Utilizatori</button></Link>
@@ -79,7 +80,9 @@ const AdminUsers = () => {
         </div>
 
         <div className="right-side">
-
+          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            ⚙️ Open Admin Panel
+          </button>
           <h2>Lista utilizatori</h2>
           <table className="admin-table">
             <thead>

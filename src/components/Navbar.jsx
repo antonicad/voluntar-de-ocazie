@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import logo from "../../public/logo.png"; 
+import logo from "../../public/logo.png";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="nav-left">
@@ -19,16 +21,14 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="nav-right">
-        <Link to="/doneaza">
-          <button className="donate-btn">Donează</button>
-        </Link>
-        <Link to="/login">
-          <button className="login-btn">Contul Meu</button>
-        </Link>
-        <Link to="/register">
-          <button className="register-btn">Devino Voluntar 📝</button>
-        </Link>
+      <div className={`nav-right ${menuOpen ? "open" : ""}`}>
+        <Link to="/doneaza"><button className="donate-btn">Donează</button></Link>
+        <Link to="/login"><button className="login-btn">Autentificare</button></Link>
+        <Link to="/register"><button className="register-btn">Devino Voluntar 📝</button></Link>
+      </div>
+
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
       </div>
     </nav>
   );

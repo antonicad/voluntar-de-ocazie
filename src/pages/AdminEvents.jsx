@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Dashboard.css";
 import "../styles/Admin.css";
-import Navbar from "../components/Navbar";
+
 import { supabase } from "../assets/supabaseClient";
 import { Link, useNavigate } from "react-router-dom";
 import profilePic from "../assets/profile.png";
@@ -10,6 +10,7 @@ const AdminEvents = () => {
   const [userData, setUserData] = useState(null);
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [newEvent, setNewEvent] = useState({
     title: "",
     description: "",
@@ -77,9 +78,9 @@ const AdminEvents = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="dashboard-container">
-        <div className="left-side">
+        <div className={`left-side ${menuOpen ? "open" : "closed"}`}>
           <h1>Admin Panel</h1>
           <Link to="/adminevents"><button>Evenimente</button></Link>
           <Link to="/adminusers"><button>Utilizatori</button></Link>
@@ -89,6 +90,9 @@ const AdminEvents = () => {
         </div>
 
         <div className="right-side">
+          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            ⚙️ Open Admin Panel
+          </button>
           <h2>Adaugă Eveniment</h2>
           <div className="event-form">
             <input

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import { supabase } from "../assets/supabaseClient";
 
@@ -45,7 +45,7 @@ const AdminLogin = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <h1>Admin Login</h1>
@@ -75,7 +75,7 @@ const AdminLogin = () => {
           <button type="submit">Login</button>
         </form>
       </div>
-      <Footer />
+      
     </>
   );
 };

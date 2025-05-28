@@ -68,3 +68,16 @@
   .login-container a {
     color: rgb(3, 214, 3);
   }
+
+  @media (max-width: 768px) {
+    .login-form {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+      box-sizing: border-box;
+    }
+
+    .login-container {
+      margin-top: 20%;
+    }
+  }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../assets/supabaseClient";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import "../styles/Evenimente.css";
 
@@ -71,7 +71,7 @@ const Evenimente = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="eventStats">
         {user ? (
           <>
@@ -107,7 +107,7 @@ const Evenimente = () => {
         ))}
       </div>
 
-      <Footer />
+      
     </>
   );
 };

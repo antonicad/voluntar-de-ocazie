@@ -1,13 +1,13 @@
 import '../styles/Contact.css'
-import Navbar from "../components/Navbar";
-import Footer from '../components/Footer';
+
+
 import Subscribe from '../components/Subscribe.jsx';
 import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
   return (
     <>
-      <Navbar />
+      
       <div className='contactContainer'>
         <h1>Contactează-ne!</h1>
         <p>
@@ -32,7 +32,7 @@ const Contact = () => {
       </div>
 
       <Subscribe />
-      <Footer />
+      
     </>
   );
 };

@@ -52,3 +52,12 @@ body {
     text-align: center !important;
     margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    .aboutUsContainer {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        box-sizing: border-box;
+    }
+}

@@ -54,3 +54,35 @@
     font-size: 2.5rem;
     color: #333;
   }
+
+  @media (max-width: 768px) {
+
+    .slider-container {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .slider {
+      padding: 0;
+    }
+
+    .slide-left, .slide-right {
+      display: none;
+    }
+
+    .slider-container img {
+      width: 100%;
+      border-radius: 0;
+    }
+
+    .slider h1 {
+      font-size: 1.5rem;
+    }
+
+    .slider p {
+      width: 80%;
+      padding: 0;
+      margin: 10%;
+    }
+  }

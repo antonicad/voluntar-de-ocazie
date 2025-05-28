@@ -1,5 +1,5 @@
 import '../styles/CineSuntem.css'
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import logo from "../../public/logo.png"; 
@@ -8,7 +8,7 @@ import voluntar from "../assets/volunteer.jpg";
 const CineSuntem = () => {
   return (
     <>
-    <Navbar />
+    
     <div className="aboutUsContainer">
       <img src={logo}></img>
       <h1>Despre Voluntar de Ocazie</h1>
@@ -59,7 +59,7 @@ const CineSuntem = () => {
       </p>
 
     </div>
-    <Footer />
+    
     </>
   );
 };

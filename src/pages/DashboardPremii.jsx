@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../assets/supabaseClient";
-import Navbar from "../components/Navbar";
+
 import "../styles/Dashboard.css";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -8,6 +8,7 @@ const DashboardPremii = () => {
   const [premii, setPremii] = useState([]);
   const [userData, setUserData] = useState(null);
   const [revendicate, setRevendicate] = useState([]);
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const fetchUserData = async () => {
@@ -94,9 +95,9 @@ const DashboardPremii = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="dashboard-container">
-        <div className="left-side">
+        <div className={`left-side ${menuOpen ? "open" : "closed"}`}>
           <h1>Panoul voluntarului</h1>
           <Link to="/dashboard"><button>Contul meu</button></Link>
           <Link to="/evenimente"><button>Evenimente</button></Link>
@@ -106,6 +107,9 @@ const DashboardPremii = () => {
         </div>
 
         <div className="right-side">
+          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            ⚙️ Deschide Panoul Voluntarului
+          </button>
           <h2>Premiile tale!</h2>
           <div className="premii">
           {premii.map((premiu) => {

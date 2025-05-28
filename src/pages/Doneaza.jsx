@@ -1,5 +1,5 @@
 import "../styles/Doneaza.css";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import { useState } from "react";
 import { supabase } from "../assets/supabaseClient";
@@ -56,7 +56,7 @@ const Doneaza = () => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="doneazaContainer">
         <h1>Donează</h1>
 
@@ -122,7 +122,7 @@ const Doneaza = () => {
           <button type="submit">Trimite donația</button>
         </form>
       </div>
-      <Footer />
+      
     </>
   );
 };

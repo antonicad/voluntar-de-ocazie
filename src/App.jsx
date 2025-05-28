@@ -16,10 +16,15 @@ import AdminEvents from './pages/AdminEvents';
 import AdminUsers from './pages/AdminUsers';
 import AdminRewards from './pages/AdminRewards';
 import AdminDonate from './pages/AdminDonate';
+import Newsletter from './components/Subscribe';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     <HashRouter>
+      <Navbar />
+      <Newsletter />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
@@ -38,6 +43,7 @@ const App = () => {
         <Route path="/adminrewards" element={<AdminRewards />} />
         <Route path="/admindonations" element={<AdminDonate />} />
       </Routes>
+      <Footer />
     </HashRouter>
   );
 };

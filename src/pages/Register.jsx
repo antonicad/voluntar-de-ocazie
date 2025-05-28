@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Login.css";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import { supabase } from "../assets/supabaseClient";
 
@@ -63,7 +63,7 @@ const Register = () => {
 
   return (
     <>
-      <Navbar />
+      
 
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
@@ -113,7 +113,7 @@ const Register = () => {
         </form>
       </div>
 
-      <Footer />
+      
     </>
   );
 };

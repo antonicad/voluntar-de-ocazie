@@ -43,3 +43,10 @@
   .inputMessage {
     height: 200px;
   }
+
+  @media (max-width: 768px) {
+    .contact-form {
+      width: 100%;
+      padding: 0;
+    }
+}

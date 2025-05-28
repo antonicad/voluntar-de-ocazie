@@ -11,7 +11,7 @@ const DonateCTA = () => {
         redirecționare a impozitului. Orice ajutor contează!
       </p>
       <div className="donate-buttons">
-        <Link to="/donate"><button className="donate-btn-home">Donează 💖</button></Link>
+        <Link to="/doneaza"><button className="donate-btn-home">Donează 💖</button></Link>
       </div>
     </div>
   );

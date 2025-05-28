@@ -1,6 +1,6 @@
 .donate-section {
     text-align: center;
-    background: linear-gradient(135deg, #00B300ff, rgb(0, 141, 0));
+    background: linear-gradient(135deg, #00B300ff, rgb(2, 193, 2));
     color: white;
     padding: 50px 20px;
     border-radius: 12px;
@@ -47,3 +47,15 @@
     background: rgb(219, 255, 219)
   }
   
+  @media (max-width: 768px) {
+    .donate-section {
+      width: 90%;
+      margin-left: 5%;
+      box-sizing: border-box;
+    }
+
+    .donate-section h1 {
+      font-size: 1.5rem;
+    }
+
+  }

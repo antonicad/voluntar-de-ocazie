@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Dashboard.css";
-import Navbar from "../components/Navbar";
+
 import { supabase } from "../assets/supabaseClient";
 import { Link, useNavigate } from "react-router-dom";
 import profilePic from "../assets/profile.png";
@@ -12,6 +12,8 @@ const Dashboard = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [codeInput, setCodeInput] = useState("");
   const [popupMessage, setPopupMessage] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
+
 
   const navigate = useNavigate();
 
@@ -144,9 +146,11 @@ const calculateLevel = (xp) => {
 
   return (
     <>
-      <Navbar />
+      
       <div className="dashboard-container">
-        <div className="left-side">
+
+
+        <div className={`left-side ${menuOpen ? "open" : "closed"}`}>
           <h1>Panoul voluntarului</h1>
           <Link to="/dashboard"><button>Contul meu</button></Link>
           <Link to="/evenimente"><button>Evenimente</button></Link>
@@ -158,6 +162,9 @@ const calculateLevel = (xp) => {
         </div>
 
         <div className="right-side">
+          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+            ⚙️ Deschide Panoul Voluntarului
+          </button>
           <img src={profilePic} alt="Profil" />
           <p>Salutare, {userData.name}!</p>
           <p>Cont creat la: {new Date(userData.created_at).toLocaleDateString()}</p>
@@ -179,7 +186,6 @@ const calculateLevel = (xp) => {
         )}
 
           <button onClick={() => setShowPopup(true)}>Adaugă cod eveniment</button>
-
 
           {/* Popup */}
           {showPopup && (

@@ -32,10 +32,14 @@
   border: 1px solid #ccc;
 }
 
+.donateForm textarea {
+  min-height: 50px;
+}
+
 .donateForm button {
   margin-top: 1.5rem;
   padding: 0.7rem;
-  background-color: #008000;
+  background-color: #00c200;
   color: white;
   border: none;
   cursor: pointer;
@@ -47,4 +51,13 @@
 
 .success {
   color: green;
+}
+
+@media (max-width: 768px) {
+  .doneazaContainer {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-sizing: border-box;
+  }
 }

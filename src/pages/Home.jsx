@@ -1,11 +1,8 @@
 import '../styles/Home.css'
 import React, { useState } from 'react';
-import Navbar from "../components/Navbar";
-import Footer from '../components/Footer';
 import Slider from '../components/Slider';
 import Partners from '../components/Partners';
 import DonateCTA from '../components/DonateCTA';
-import Subscribe from '../components/Subscribe.jsx';
 import { Link } from 'react-router-dom';
 import facebook from "../styles/images/facebook.png";
 import instagram from "../styles/images/instagram.png";
@@ -15,8 +12,7 @@ import x from "../styles/images/x.jpg";
 const Home = () => {
       return (
         <>
-          <Navbar />
-
+          
           {/* Banner */}
           <div className='first-Banner'>
             <div className='banner-box'>
@@ -80,8 +76,14 @@ const Home = () => {
             </div>
           </div>
 
-          <Subscribe />
-          <Footer />
+          <div className="contactUs">
+            <h1>Intră în legătură cu noi</h1>
+            <Link to="/contact">
+            <button> Contactează-ne!</button>
+            </Link>
+          </div>
+
+          
         </>
       );
 };
