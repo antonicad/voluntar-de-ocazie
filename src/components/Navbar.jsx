@@ -22,9 +22,9 @@ const Navbar = () => {
       </div>
 
       <div className={`nav-right ${menuOpen ? "open" : ""}`}>
-        <Link to="/doneaza"><button className="donate-btn">Donează</button></Link>
-        <Link to="/login"><button className="login-btn">Autentificare</button></Link>
-        <Link to="/register"><button className="register-btn">Devino Voluntar 📝</button></Link>
+        <Link to="/doneaza"><button className="donate-btn" onClick={() => setMenuOpen(false)}>Donează</button></Link>
+        <Link to="/login"><button className="login-btn" onClick={() => setMenuOpen(false)}>Autentificare</button></Link>
+        <Link to="/register"><button className="register-btn" onClick={() => setMenuOpen(false)}>Devino Voluntar 📝</button></Link>
       </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

@@ -80,6 +80,8 @@ const Login = () => {
           />
 
           <p>
+            Ai uitat parola? <Link to="/recover">Recuperează parola</Link>
+            <br></br>
             Nu ai un cont? <Link to="/register">Creează unul aici</Link>
           </p>
 

@@ -17,6 +17,8 @@ import AdminUsers from './pages/AdminUsers';
 import AdminRewards from './pages/AdminRewards';
 import AdminDonate from './pages/AdminDonate';
 import Newsletter from './components/Subscribe';
+import Recover from './pages/Recover';
+import UpdatePassword from './pages/UpdatePassword';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -42,6 +44,8 @@ const App = () => {
         <Route path="/adminusers" element={<AdminUsers />} />
         <Route path="/adminrewards" element={<AdminRewards />} />
         <Route path="/admindonations" element={<AdminDonate />} />
+        <Route path="/updatepassword" element={<UpdatePassword />} />
+        <Route path="/recover" element={<Recover />} />
       </Routes>
       <Footer />
     </HashRouter>
