@@ -172,12 +172,12 @@
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block;
+    display: block !important;
   }
 
   .left-side {

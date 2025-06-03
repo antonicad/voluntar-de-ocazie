@@ -1,55 +1,51 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../styles/Login.css";
-import Footer from "../components/Footer";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { supabase } from "../assets/supabaseClient";
 
 const UpdatePassword = () => {
-  const [newPassword, setNewPassword] = useState("");
+  const [searchParams] = useSearchParams();
+  const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleUpdatePassword = async (e) => {
-    e.preventDefault();
-    setMessage("");
-    setError("");
+  const accessToken = searchParams.get("access_token");
 
-    const { error } = await supabase.auth.updateUser({
-      password: newPassword,
-    });
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+
+    if (!accessToken) {
+      setMessage("Token lipsă. Reîncearcă procedura de resetare.");
+      return;
+    }
+
+    const { data, error } = await supabase.auth.updateUser(
+      { password },
+      { accessToken }
+    );
 
     if (error) {
-      setError("A apărut o eroare la schimbarea parolei. Încearcă din nou.");
+      setMessage("Eroare: " + error.message);
     } else {
-      setMessage("Parola a fost schimbată cu succes!");
+      setMessage("Parola a fost schimbată cu succes! Te redirecționăm...");
       setTimeout(() => navigate("/login"), 2000);
     }
   };
 
   return (
-    <>
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleUpdatePassword}>
-          <h1>Setează Parolă Nouă</h1>
-
-          {message && <p className="success">{message}</p>}
-          {error && <p className="error">{error}</p>}
-
-          <label htmlFor="newPassword">Parolă nouă</label>
-          <input
-            type="password"
-            id="newPassword"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-            placeholder="Parolă nouă"
-          />
-
-          <button type="submit">Salvează</button>
-        </form>
-      </div>
-      <Footer />
-    </>
+    <div className="login-container">
+      <form className="login-form" onSubmit={handleUpdate}>
+        <h1>Setează o parolă nouă</h1>
+        {message && <p>{message}</p>}
+        <label>Noua parolă</label>
+        <input
+          type="password"
+          placeholder="********"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button type="submit">Salvează parola</button>
+      </form>
+    </div>
   );
 };
 

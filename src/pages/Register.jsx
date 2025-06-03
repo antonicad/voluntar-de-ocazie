@@ -49,7 +49,7 @@ const Register = () => {
 
       if (insertError) throw insertError;
 
-      setSuccess("Cont creat cu succes! Acum te poți autentifica.");
+      setSuccess("Cont creat cu succes! Vei primi un e-mail pentru confirmare.");
       setError("");
       setEmail("");
       setPassword("");
