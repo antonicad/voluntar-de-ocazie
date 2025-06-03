@@ -32,9 +32,7 @@ const Slider = () => {
     <div className="slider">
       <h1>Facem totul așa cum trebuie!</h1>
       <div className="slider-container">
-        <button className="slide-left" onClick={prevSlide}>⬅️</button>
         <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slider-image" />
-        <button className="slide-right" onClick={nextSlide}>➡️</button>
       </div>
       <p>
       Fiecare fotografie spune o poveste despre pasiunea, implicarea și energia voluntarilor noștri. De la momente de bucurie și echipă, până la evenimente memorabile, fiecare imagine reflectă dorința noastră de a face o schimbare reală. Alătură-te și tu acestui drum plin de emoții și descoperă cum fiecare gest contează! 💙✨

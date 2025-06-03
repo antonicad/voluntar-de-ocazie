@@ -1,10 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { supabase } from "../assets/supabaseClient"; // importă instanța supabase
 import "../styles/Navbar.css";
 import logo from "../../public/logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
+
+  // verificăm dacă e logat
+  useEffect(() => {
+    const getUser = async () => {
+      const { data: { user } } = await supabase.auth.getUser();
+      setUser(user);
+    };
+
+    getUser();
+
+    // ascultăm schimbările de autentificare
+    const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+      setUser(session?.user || null);
+    });
+
+    return () => {
+      listener?.subscription.unsubscribe();
+    };
+  }, []);
 
   return (
     <nav className="navbar">
@@ -22,9 +43,23 @@ const Navbar = () => {
       </div>
 
       <div className={`nav-right ${menuOpen ? "open" : ""}`}>
-        <Link to="/doneaza"><button className="donate-btn" onClick={() => setMenuOpen(false)}>Donează</button></Link>
-        <Link to="/login"><button className="login-btn" onClick={() => setMenuOpen(false)}>Autentificare</button></Link>
-        <Link to="/register"><button className="register-btn" onClick={() => setMenuOpen(false)}>Devino Voluntar 📝</button></Link>
+        <Link to="/doneaza">
+          <button className="donate-btn" onClick={() => setMenuOpen(false)}>Donează</button>
+        </Link>
+
+        {user ? (
+          <Link to="/dashboard">
+            <button className="login-btn" onClick={() => setMenuOpen(false)}>Contul meu</button>
+          </Link>
+        ) : (
+          <Link to="/login">
+            <button className="login-btn" onClick={() => setMenuOpen(false)}>Autentificare</button>
+          </Link>
+        )}
+
+        <Link to="/register">
+          <button className="register-btn" onClick={() => setMenuOpen(false)}>Devino Voluntar 📝</button>
+        </Link>
       </div>
 
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
