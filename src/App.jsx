@@ -1,5 +1,5 @@
 import './styles/App.css';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import CineSuntem from './pages/CineSuntem';
@@ -24,7 +24,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Navbar />
       <Newsletter />
       <Routes>
@@ -48,7 +48,7 @@ const App = () => {
         <Route path="/recover" element={<Recover />} />
       </Routes>
       <Footer />
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
