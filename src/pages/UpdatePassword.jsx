@@ -1,14 +1,19 @@
-import React, { useState } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../assets/supabaseClient";
 
 const UpdatePassword = () => {
-  const [searchParams] = useSearchParams();
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const [accessToken, setAccessToken] = useState(null);
   const navigate = useNavigate();
 
-  const accessToken = searchParams.get("access_token");
+  useEffect(() => {
+    const hash = window.location.hash;
+    const params = new URLSearchParams(hash.replace("#", ""));
+    const token = params.get("access_token");
+    setAccessToken(token);
+  }, []);
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -25,6 +30,7 @@ const UpdatePassword = () => {
 
     if (error) {
       setMessage("Eroare: " + error.message);
+      await supabase.auth.signOut();
     } else {
       setMessage("Parola a fost schimbată cu succes! Te redirecționăm...");
       setTimeout(() => navigate("/login"), 2000);
