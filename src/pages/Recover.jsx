@@ -15,7 +15,7 @@ const Recover = () => {
     setSuccess("");
 
     const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: "https://antonicad.github.io/voluntar-de-ocazie/updatepassword",
+      redirectTo: "https://voluntar-de-ocazie.netlify.app/updatepassword",
     });
 
     if (error) {
