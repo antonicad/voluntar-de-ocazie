@@ -2,7 +2,7 @@ import '../styles/CineSuntem.css'
 
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import logo from "../../public/logo.png"; 
+import logo from "/logo.png"; 
 import voluntar from "../assets/volunteer.jpg";
 
 const CineSuntem = () => {
