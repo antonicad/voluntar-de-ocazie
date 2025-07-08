@@ -180,6 +180,21 @@
     display: block !important;
   }
 
+  .popUpInsertCode {
+    width: 80%;
+    height: 40%;
+    padding-top: 5%;
+}
+
+  .popUpInsertCode p {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+.popUpInsertCode input {
+  width: 80%;
+}
+
   .left-side {
     position: fixed;
     top: 15vh;

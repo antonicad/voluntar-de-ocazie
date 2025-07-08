@@ -109,7 +109,7 @@ const Dashboard = () => {
       experience: newXP,
     }));
 
-    setPopupMessage("Cod adăugat cu succes! Ai primit 50 XP.");
+    setPopupMessage("Felicitări! Ai primit 50 XP.");
     setCodeInput("");
   } catch (err) {
     console.error("Eroare la folosirea codului:", err);
